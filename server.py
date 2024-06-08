@@ -1,10 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import requests, re, ast, json
-from urllib.request import urlopen, Request
-from urllib import parse
 # Data analysis tool
-import pandas as pd
 import numpy as np
 # Data source
 import akshare as ak
