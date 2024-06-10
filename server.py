@@ -205,7 +205,9 @@ def getFundHistoryInfo():
     except Exception as e:
         print(e)
         return jsonify({'code': 500, 'data':[], 'message': 'Get Data Error'})
-
+    
+    if fund_data is None or fund_data.empty:
+        return jsonify({'code': 200,'data': [],'msg': 'No Data'})
     fund_data_list = np.array(fund_data).tolist()
 
     return jsonify({'code': 200,'data': fund_data_list})
